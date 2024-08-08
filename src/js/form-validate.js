@@ -1,6 +1,5 @@
 function formValidateHandler(){
     const email = document.querySelector("#email");
-    const country = document.querySelector("#country");
     const zip = document.querySelector("#zip");
     const password = document.querySelector("#password");
     const passwordConfirm = document.querySelector("#password-confirm");
@@ -32,6 +31,22 @@ function formValidateHandler(){
         }
     })
 
+    password.addEventListener("input", (event) =>{
+        if (password.validity.patternMismatch) {
+            password.setCustomValidity("Must contain at least one-uppercase and one digit!");
+            password.reportValidity();
+        } else{
+            password.setCustomValidity("");
+        }
+    })
+    passwordConfirm.addEventListener("input", (event) =>{
+        if (passwordConfirm.value !== password.value){
+            passwordConfirm.setCustomValidity("Passwords must match!");
+            passwordConfirm.reportValidity();
+        } else{
+            passwordConfirm.setCustomValidity("");
+        }
+    })
 
 }
 
