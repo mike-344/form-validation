@@ -4,10 +4,16 @@ function formValidateHandler(){
     const password = document.querySelector("#password");
     const passwordConfirm = document.querySelector("#password-confirm");
     const submit = document.querySelector(".submit");
+    const form = document.querySelector("form");
 
     
     submit.addEventListener("click",(e) =>{
         e.preventDefault();
+        
+            if (!form.checkValidity()){
+                form.reportValidity();
+            } 
+        
     })
     
     email.addEventListener("input", (event) => {
