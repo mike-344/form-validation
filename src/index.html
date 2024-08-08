@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
 </head>
 <body>
-    
+    <form action="" novalidate>
+        <div class="email-wrap">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="country-wrap">
+            <label for="country">Country:</label>
+            <input type="text" id="country" required>
+        </div>
+        <div class="zip-wrap">
+            <label for="zip">Zip Code:</label>
+            <input type="number" id="zip" required>
+        </div>
+        <div class="password-wrap">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        </div>
+        <div class="password-confirm-wrap">
+            <label for="password-confirm">Re-enter Password</label>
+            <input type="password" id="password-confirm" required>
+        </div>
+        <button class="submit">Submit</button>
+    </form>
 </body>
 </html>

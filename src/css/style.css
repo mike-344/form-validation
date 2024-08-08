@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+form div{
+    margin-bottom: 8px;
+}
+input{
+    border: none;
+}
+input:invalid, input:invalid:focus{
+    outline: 2px dotted red;
+}
+input:valid, input:valid:focus{
+    outline: 2px solid green;
+}
