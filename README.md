@@ -1,4 +1,4 @@
-# project-template
+# form-validation
 
 Form validation practice using the Constraint Validation API
 
